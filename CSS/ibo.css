@@ -130,21 +130,6 @@ a {
     linear-gradient(225deg, white 25%, transparent 25%);
   background-size: 30px 30px;
 }
-.dots {
-  background-image: url(../imgs/dots.png);
-  height: 186px;
-  width: 205px;
-  background-repeat: no-repeat;
-  position: absolute;
-}
-.dots-up {
-  top: 200px;
-  right: 0;
-}
-.dots-down {
-  bottom: 200px;
-  left: 0;
-}
 /* End Components */
 /* Start Header */
 .header {
@@ -337,12 +322,23 @@ a {
   align-items: center;
   padding-bottom: 120px;
 }
+@media (max-width: 991px) {
+  .landing .container {
+    flex-direction: column;
+  }
+}
 .landing .container .text {
   flex: 1;
 }
 @media (max-width: 991px) {
   .landing .container .text {
     text-align: center;
+    margin-top: 36px;
+  }
+}
+@media (max-width: 767px) {
+  .landing .container .text {
+    margin-top: 220px;
   }
 }
 .landing .container .text h1 {
@@ -373,11 +369,6 @@ a {
     font-size: 18px;
   }
 }
-@media (max-width: 991px) {
-  .landing .container .image {
-    display: none;
-  }
-}
 .landing .container .image img {
   position: relative;
   width: 600px;
@@ -385,6 +376,12 @@ a {
   -moz-animation: up-and-down 5s linear infinite;
   -o-animation: up-and-down 5s linear infinite;
   animation: up-and-down 5s linear infinite;
+}
+@media (max-width: 767px) {
+  .landing .container .image img {
+    width: 350px;
+    margin-bottom: 100px;
+  }
 }
 .landing .container .go-down {
   position: absolute;
@@ -1433,6 +1430,11 @@ a {
   width: fit-content;
   margin: 0 auto 50px;
   position: relative;
+}
+@media (max-width: 767px) {
+  .statistics h2 {
+    font-size: 30px;
+  }
 }
 .statistics .container {
   display: grid;
